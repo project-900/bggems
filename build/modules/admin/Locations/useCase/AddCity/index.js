@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addCityController = void 0;
+const Locations_1 = require("../../repository/implementations/Locations");
+const AddCityController_1 = require("./AddCityController");
+const AddCityUseCases_1 = require("./AddCityUseCases");
+const locationRepository = new Locations_1.LocationRepository();
+const addCityUseCase = new AddCityUseCases_1.AddCityUseCase(locationRepository);
+const addCityController = new AddCityController_1.AddCityController(addCityUseCase);
+exports.addCityController = addCityController;

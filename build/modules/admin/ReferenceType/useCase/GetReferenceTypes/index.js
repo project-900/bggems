@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getReferenceTypesController = void 0;
+const ReferenceTypeRepository_1 = require("../../repository/implementations/ReferenceTypeRepository");
+const GetReferenceTypesController_1 = require("./GetReferenceTypesController");
+const GetReferenceTypesUseCases_1 = require("./GetReferenceTypesUseCases");
+const referenceTypeRepository = new ReferenceTypeRepository_1.ReferenceTypeRepository();
+const getReferenceTypesUseCase = new GetReferenceTypesUseCases_1.GetReferenceTypesUseCase(referenceTypeRepository);
+const getReferenceTypesController = new GetReferenceTypesController_1.GetReferenceTypesController(getReferenceTypesUseCase);
+exports.getReferenceTypesController = getReferenceTypesController;

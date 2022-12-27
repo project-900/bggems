@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.forgotPasswordController = void 0;
+const userAuthRepository_1 = require("../../repository/implementations/userAuthRepository");
+const forgotPasswordController_1 = require("./forgotPasswordController");
+const forgotPasswordUseCases_1 = require("./forgotPasswordUseCases");
+const userAuthRepository = new userAuthRepository_1.UserAuthRepository();
+const forgotPasswordUseCase = new forgotPasswordUseCases_1.ForgotPasswordUseCase(userAuthRepository);
+const forgotPasswordController = new forgotPasswordController_1.ForgotPasswordController(forgotPasswordUseCase);
+exports.forgotPasswordController = forgotPasswordController;

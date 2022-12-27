@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getSalesPersonsController = void 0;
+const SalesPersonRepository_1 = require("../../repository/implementations/SalesPersonRepository");
+const GetSalesPersonsController_1 = require("./GetSalesPersonsController");
+const GetSalesPersonsUseCases_1 = require("./GetSalesPersonsUseCases");
+const salesPersonRepository = new SalesPersonRepository_1.SalesPersonRepository();
+const getSalesPersonsUseCase = new GetSalesPersonsUseCases_1.GetSalesPersonsUseCase(salesPersonRepository);
+const getSalesPersonsController = new GetSalesPersonsController_1.GetSalesPersonsController(getSalesPersonsUseCase);
+exports.getSalesPersonsController = getSalesPersonsController;

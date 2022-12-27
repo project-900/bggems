@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addBusinessTypesController = void 0;
+const BusinessTypeRepository_1 = require("../../repository/implementations/BusinessTypeRepository");
+const AddBusinessTypesController_1 = require("./AddBusinessTypesController");
+const AddBusinessTypesUseCases_1 = require("./AddBusinessTypesUseCases");
+const businessTypeRepository = new BusinessTypeRepository_1.BusinessTypeRepository();
+const addBusinessTypesUseCase = new AddBusinessTypesUseCases_1.AddBusinessTypesUseCase(businessTypeRepository);
+const addBusinessTypesController = new AddBusinessTypesController_1.AddBusinessTypesController(addBusinessTypesUseCase);
+exports.addBusinessTypesController = addBusinessTypesController;

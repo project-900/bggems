@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.findUserController = void 0;
+const UserAuthRepository_1 = require("../../repository/implementations/UserAuthRepository");
+const findUserController_1 = require("./findUserController");
+const findUserUseCases_1 = require("./findUserUseCases");
+const userAuthRepository = new UserAuthRepository_1.UserAuthRepository();
+const findUserUseCase = new findUserUseCases_1.FindUserUseCase(userAuthRepository);
+const findUserController = new findUserController_1.FindUserController(findUserUseCase);
+exports.findUserController = findUserController;

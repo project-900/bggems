@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.resetPasswordController = void 0;
+const UserAuthRepository_1 = require("../../repository/implementations/UserAuthRepository");
+const ResetPasswordController_1 = require("./ResetPasswordController");
+const ResetPasswordUseCases_1 = require("./ResetPasswordUseCases");
+const userAuthRepository = new UserAuthRepository_1.UserAuthRepository();
+const resetPasswordUseCase = new ResetPasswordUseCases_1.ResetPasswordUseCase(userAuthRepository);
+const resetPasswordController = new ResetPasswordController_1.ResetPasswordController(resetPasswordUseCase);
+exports.resetPasswordController = resetPasswordController;

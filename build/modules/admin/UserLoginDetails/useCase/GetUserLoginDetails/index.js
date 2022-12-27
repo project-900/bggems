@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUserLoginDetailsController = void 0;
+const GetUserLoginDetailsRepository_1 = require("../../repository/implementations/GetUserLoginDetailsRepository");
+const GetUserLoginDetailsController_1 = require("./GetUserLoginDetailsController");
+const GetUserLoginDetailsUseCases_1 = require("./GetUserLoginDetailsUseCases");
+const userLoginDetailRepository = new GetUserLoginDetailsRepository_1.UserLoginDetailRepository();
+const getUserLoginDetailsUseCase = new GetUserLoginDetailsUseCases_1.GetUserLoginDetailsUseCase(userLoginDetailRepository);
+const getUserLoginDetailsController = new GetUserLoginDetailsController_1.GetUserLoginDetailsController(getUserLoginDetailsUseCase);
+exports.getUserLoginDetailsController = getUserLoginDetailsController;
