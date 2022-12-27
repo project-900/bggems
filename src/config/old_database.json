@@ -1,0 +1,19 @@
+{
+    "host" : "localhost",
+    "username" : "SA",
+    "password" : "OPTICAL",
+    "database" : "bggems",
+    "driver" : "msnodesqlv8",
+    "dialectOptions": {
+        "connectionString": "Server=localhost;Database=BGDim;User Id=Clv;Password=Clv;Trusted_Connection=yes;Driver={SQL Server Native Client 11.0};",
+        "instanceName": "SQLEXPRESS",
+        "trustedConnection": true,
+        "options": {
+            "encrypt": false,
+            "enableArithAbort": false,
+            "trustServerCertificate": false
+        }
+    },
+    "dialect" : "mssql",
+    "port": 1433
+}

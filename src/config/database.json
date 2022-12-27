@@ -1,0 +1,19 @@
+{
+    "host" : "projecttest123.database.windows.net",
+    "username" : "Projecttest",
+    "password" : "Admin@123",
+    "database" : "bggems",
+    "driver" : "msnodesqlv8",
+    "dialectOptions": {
+        "connectionString": "Server=Projecttest;Database=bggems;User Id=Clv;Password=Admin@123;Trusted_Connection=yes;Driver={SQL Server Native Client 11.0};",
+        "instanceName": "SQLEXPRESS",
+        "trustedConnection": true,
+        "options": {
+            "encrypt": true,
+            "enableArithAbort": false,
+            "trustServerCertificate": false
+        }
+    },
+    "dialect" : "mssql",
+    "port": 1433
+}

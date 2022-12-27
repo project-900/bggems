@@ -1,0 +1,30 @@
+// require('dotenv').config()
+
+// let db ; 
+// if(process.env.DB_MODE == 'production'){
+//     db = {
+//         host : process.env.DB_PROD_HOST,
+//         username : process.env.DB_PROD_Username,
+//         password : process.env.DB_PROD_Password,
+//         database : process.env.DB_PROD_DATABASE,
+//         dialect : process.env.DB_PROD_DIALECT
+//     }
+// }else if(process.env.DB_MODE == 'testing'){
+//     db = {
+//         host : process.env.DB_TEST_HOST,
+//         username : process.env.DB_TEST_Username,
+//         password : process.env.DB_TEST_Password,
+//         database : process.env.DB_TEST_DATABASE,
+//         dialect : process.env.DB_TEST_DIALECT
+//     }
+// }else{
+//     db = {
+//         host : process.env.DB_DEV_HOST,
+//         username : process.env.DB_DEV_Username,
+//         password : process.env.DB_DEV_Password,
+//         database : process.env.DB_DEV_DATABASE,
+//         dialect : process.env.DB_DEV_DIALECT
+//     }
+// }
+
+// module.exports = db
