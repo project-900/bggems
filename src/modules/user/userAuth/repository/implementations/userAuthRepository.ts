@@ -33,7 +33,7 @@ let currentDate = `${year}-${month}-${date}`;
 let currentTime = `${hours}:${minutes}:${seconds}`;
 let FullDate = `${currentDate} ${currentTime}`;
 
-class UserAuthRepository implements IUserAuthRepository {
+export class UserAuthRepository implements IUserAuthRepository {
 
     // Generate Token
     generateToken(loginUser: string): string {
@@ -293,6 +293,6 @@ class UserAuthRepository implements IUserAuthRepository {
 
 }
 
-export {
-    UserAuthRepository
-}
+// export {
+//     UserAuthRepository
+// }
