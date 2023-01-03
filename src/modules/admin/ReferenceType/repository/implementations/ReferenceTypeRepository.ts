@@ -4,7 +4,6 @@ import moment from 'moment';
 import jwt from 'jsonwebtoken';
 import { Sequelize } from 'sequelize';
 
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = moment().format('YYYY-MM-DD');
 const currentTime = moment().format('HH:mm:ss');

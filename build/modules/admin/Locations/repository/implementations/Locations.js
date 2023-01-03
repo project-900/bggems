@@ -17,7 +17,6 @@ const moment_1 = __importDefault(require("moment"));
 const CityMaster_1 = require("../../../../../models/CityMaster");
 const RegionMaster_1 = require("../../../../../models/RegionMaster");
 const CountryMaster_1 = require("../../../../../models/CountryMaster");
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
 const currentTime = (0, moment_1.default)().format('HH:mm:ss');

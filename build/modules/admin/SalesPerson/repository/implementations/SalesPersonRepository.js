@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SalesPersonRepository = void 0;
 const SalesPersonMaster_1 = require("../../../../../models/SalesPersonMaster");
 const moment_1 = __importDefault(require("moment"));
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
 const currentTime = (0, moment_1.default)().format('HH:mm:ss');

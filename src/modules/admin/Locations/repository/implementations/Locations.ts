@@ -7,7 +7,6 @@ import { CityMaster } from '../../../../../models/CityMaster';
 import { RegionMaster } from '../../../../../models/RegionMaster';
 import { CountryMaster } from '../../../../../models/CountryMaster';
 
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = moment().format('YYYY-MM-DD');
 const currentTime = moment().format('HH:mm:ss');

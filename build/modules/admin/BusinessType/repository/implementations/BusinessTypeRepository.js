@@ -16,7 +16,6 @@ exports.BusinessTypeRepository = void 0;
 const BusinessTypes_1 = require("../../../../../models/BusinessTypes");
 const moment_1 = __importDefault(require("moment"));
 const sequelize_1 = require("sequelize");
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
 const currentTime = (0, moment_1.default)().format('HH:mm:ss');

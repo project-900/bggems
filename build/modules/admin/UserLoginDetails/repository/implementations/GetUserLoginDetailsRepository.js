@@ -18,7 +18,6 @@ const moment_1 = __importDefault(require("moment"));
 const UserRoles_1 = require("../../../../../models/UserRoles");
 require('dotenv').config();
 const ADMIN_ROLE_ID = process.env.ADMIN_ROLE_ID;
-const authConfig = require('../../../../../config/auth.json');
 const { Op } = require('sequelize');
 const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
 const currentTime = (0, moment_1.default)().format('HH:mm:ss');
