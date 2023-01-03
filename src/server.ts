@@ -29,6 +29,10 @@ morganBody(app, {
     stream: log
 })
 
+app.get("/", (req, res)=>{
+    res.send("welcome to bggems backend...")
+})
+
 app.use(router);
 const PORT = process.env.PORT ? process.env.PORT : 8001;
 app.listen(PORT, ()=>{

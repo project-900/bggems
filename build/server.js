@@ -28,6 +28,9 @@ const log = fs.createWriteStream(path_1.default.join(__dirname + "/logs", `${(0,
     noColors: true,
     stream: log
 });
+app.get("/", (req, res) => {
+    res.send("welcome to bggems backend...");
+});
 app.use(index_routes_1.router);
 const PORT = process.env.PORT ? process.env.PORT : 8001;
 app.listen(PORT, () => {
