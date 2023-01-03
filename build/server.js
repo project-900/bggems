@@ -20,7 +20,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']
 }));
 app.use(bodyParser.json());
-var dir = './src/logs';
+var dir = './build/logs';
 if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
 }
