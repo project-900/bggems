@@ -38,7 +38,7 @@ class AddReferenceTypesUseCase {
                     return {
                         Status: true,
                         message: 'Reference types Add successfully...',
-                        data: AddReferenceTypes
+                        data: {}
                     };
                 }
             }

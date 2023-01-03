@@ -29,7 +29,7 @@ class AddRegionUseCase {
                     return {
                         Status: true,
                         message: 'Region Add successfully...',
-                        data: AddRegion
+                        data: {}
                     };
                 }
             }

@@ -1,6 +1,7 @@
 import { ILocationRepository } from '../../repository/ILocations';
 interface IRequests {
     CountryName: string,
+    CountryCode: string,
     ShortName: string,
     Continent: string,
 }
@@ -8,9 +9,9 @@ interface IRequests {
 class AddCountryUseCase {
     constructor(private LocationRepository: ILocationRepository) { }
 
-    async execute({ CountryName, ShortName, Continent }: IRequests): Promise<any> {
+    async execute({ CountryName, CountryCode, ShortName, Continent }: IRequests): Promise<any> {
         try {
-            const AddCountry = await this.LocationRepository.AddCountries({ CountryName, ShortName, Continent })
+            const AddCountry = await this.LocationRepository.AddCountries({ CountryName, CountryCode, ShortName, Continent })
             if (AddCountry.error) {
                 return {
                     Status: false,
@@ -29,7 +30,7 @@ class AddCountryUseCase {
                 return {
                     Status: true,
                     message: 'Country Add successfully...',
-                    data: AddCountry
+                    data: {}
                 };
             }
         } catch {

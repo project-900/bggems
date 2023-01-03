@@ -18,19 +18,6 @@ class GetCountryController {
     handle(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
             const Status = request.query.Status ? request.query.Status : null;
-            var static_ip = "207.97.227.239";
-            var ip = request.headers['x-forwarded-for'] || request.socket.remoteAddress || null;
-            var geo = geoip.lookup(ip);
-            var static_ip_geo = geoip.lookup(static_ip);
-            console.log(geo);
-            let data = {
-                ip,
-                geo,
-                static_ip,
-                static_ip_geo
-            };
-            console.log(data);
-            return response.status(200).send(data);
             const result = yield this.GetCountryUseCase.execute({ Status: Status });
             if (result.Status == true) {
                 return response.status(200).send(result);

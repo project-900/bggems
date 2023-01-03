@@ -36,7 +36,7 @@ class AddCityUseCase {
                     return {
                         Status: true,
                         message: 'City Add successfully...',
-                        data: AddCity
+                        data: {}
                     };
                 }
             }

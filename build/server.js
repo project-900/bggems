@@ -14,7 +14,11 @@ const fs = require("fs");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = (0, express_1.default)();
-app.use(cors());
+app.use(cors({
+    // origin: ['https://www.google.com/'],
+    origin: '*',
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']
+}));
 app.use(bodyParser.json());
 const log = fs.createWriteStream(path_1.default.join(__dirname + "/logs", `${(0, moment_1.default)().format('YYYY-MM-DD')}.log`), { flags: "a" });
 // const passport = require("passport");

@@ -12,6 +12,7 @@ class CountryMaster extends Model {
             },
             CountryName:  DataTypes.STRING,
             ShortName:  DataTypes.STRING,
+            CountryCode:  DataTypes.STRING,
             Continent:  DataTypes.STRING,
             Status:  DataTypes.STRING,
         },{

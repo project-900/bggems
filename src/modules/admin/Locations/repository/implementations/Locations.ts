@@ -122,11 +122,12 @@ class LocationRepository implements ILocationRepository {
     }
 
     // Add new country
-    async AddCountries({ CountryName, ShortName, Continent }: any): Promise<any> {
+    async AddCountries({ CountryName, CountryCode, ShortName, Continent }: any): Promise<any> {
 
         const find = await CountryMaster.findOne({
             where : {
                 CountryName: CountryName, 
+                CountryCode: CountryCode, 
                 ShortName: ShortName, 
                 Continent: Continent
             }

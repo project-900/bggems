@@ -4,7 +4,7 @@ interface ILocationRepository {
     getRegions({ Status, CountryId }:any): Promise<any>;
     
     AddCities({ CityName, CountryId, RegionId, TimeZone }:any): Promise<any>;
-    AddCountries({ CountryName, ShortName, Continent }:any): Promise<any>;
+    AddCountries({ CountryName, CountryCode, ShortName, Continent }:any): Promise<any>;
     AddRegions({ RegionName, ShortName, CountryId }:any): Promise<any>;
 
 }

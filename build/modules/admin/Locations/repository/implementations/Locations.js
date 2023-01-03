@@ -128,11 +128,12 @@ class LocationRepository {
         });
     }
     // Add new country
-    AddCountries({ CountryName, ShortName, Continent }) {
+    AddCountries({ CountryName, CountryCode, ShortName, Continent }) {
         return __awaiter(this, void 0, void 0, function* () {
             const find = yield CountryMaster_1.CountryMaster.findOne({
                 where: {
                     CountryName: CountryName,
+                    CountryCode: CountryCode,
                     ShortName: ShortName,
                     Continent: Continent
                 }

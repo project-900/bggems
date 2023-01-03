@@ -14,10 +14,10 @@ class AddCountryUseCase {
     constructor(LocationRepository) {
         this.LocationRepository = LocationRepository;
     }
-    execute({ CountryName, ShortName, Continent }) {
+    execute({ CountryName, CountryCode, ShortName, Continent }) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const AddCountry = yield this.LocationRepository.AddCountries({ CountryName, ShortName, Continent });
+                const AddCountry = yield this.LocationRepository.AddCountries({ CountryName, CountryCode, ShortName, Continent });
                 if (AddCountry.error) {
                     return {
                         Status: false,
@@ -36,7 +36,7 @@ class AddCountryUseCase {
                     return {
                         Status: true,
                         message: 'Country Add successfully...',
-                        data: AddCountry
+                        data: {}
                     };
                 }
             }

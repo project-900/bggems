@@ -16,8 +16,8 @@ class AddCountryController {
     }
     handle(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { CountryName, ShortName, Continent } = request.body;
-            const result = yield this.AddCountryUseCase.execute({ CountryName, ShortName, Continent });
+            const { CountryName, CountryCode, ShortName, Continent } = request.body;
+            const result = yield this.AddCountryUseCase.execute({ CountryName, CountryCode, ShortName, Continent });
             if (result.Status == true) {
                 return response.status(200).send(result);
             }

@@ -38,7 +38,7 @@ class AddBusinessTypesUseCase {
                     return {
                         Status: true,
                         message: 'Business types Add successfully...',
-                        data: AddBusinessTypes
+                        data: {}
                     };
                 }
             }

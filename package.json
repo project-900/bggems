@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev nodemon src/server.ts"
+    "dev": "ts-node-dev src/server.ts"
   },
   "author": "saikiran",
   "license": "ISC",
@@ -28,7 +28,6 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
     "morgan-body": "^2.6.8",
-    "msnodesqlv8": "^2.6.0",
     "mssql": "^9.0.1",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^2.3.3",

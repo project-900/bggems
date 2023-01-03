@@ -7,11 +7,12 @@ class AddCountryController {
     async handle(request: Request, response: Response): Promise<any>{
         const { 
             CountryName,
+            CountryCode,
             ShortName,
             Continent
         } = request.body;
 
-        const result = await this.AddCountryUseCase.execute({ CountryName, ShortName, Continent });
+        const result = await this.AddCountryUseCase.execute({ CountryName, CountryCode, ShortName, Continent });
 
         if(result.Status == true){
             return response.status(200).send(result);

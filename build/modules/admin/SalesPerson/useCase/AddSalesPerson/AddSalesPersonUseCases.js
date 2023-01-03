@@ -38,7 +38,7 @@ class AddSalesPersonsUseCase {
                     return {
                         Status: true,
                         message: 'Sales Person Add successfully...',
-                        data: AddSalesPersons
+                        data: {}
                     };
                 }
             }

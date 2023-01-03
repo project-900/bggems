@@ -50,7 +50,7 @@ module.exports = {
     username: USERNAME,
     password: PASSWORD,
     database: DATABASE,
-    driver: DRIVER,
+    // driver : DRIVER,
     dialectOptions: {
         connectionString: `Server=${HOST},${PORT};Initial Catalog=${DATABASE};Persist Security Info=False;User ID=${USERNAME};Password=${PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;`,
         instanceName: "SQLEXPRESS",

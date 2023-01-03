@@ -12,7 +12,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app: Express = express();
-app.use(cors());
+app.use(cors({
+    // origin: ['https://www.google.com/'],
+    origin: '*',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(bodyParser.json());
 const log = fs.createWriteStream(path.join(__dirname + "/logs", `${moment().format('YYYY-MM-DD')}.log`), { flags: "a" });
 
