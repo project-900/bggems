@@ -20,6 +20,10 @@ app.use(cors({
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']
 }));
 app.use(bodyParser.json());
+var dir = './src/logs';
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+}
 const log = fs.createWriteStream(path_1.default.join(__dirname + "/logs", `${(0, moment_1.default)().format('YYYY-MM-DD')}.log`), { flags: "a" });
 // const passport = require("passport");
 // app.use(passport.initialize());
