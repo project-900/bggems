@@ -6,7 +6,6 @@ const GetBusinessTypes_1 = require("../modules/admin/BusinessType/useCase/GetBus
 const AddBusinessTypes_1 = require("../modules/admin/BusinessType/useCase/AddBusinessTypes");
 const businessTypeRouter = (0, express_1.Router)();
 exports.businessTypeRouter = businessTypeRouter;
-// userAuthRouter.post('/login', joiValidate(userSchema.login), (request, response)=>{
 businessTypeRouter.get('/get-business-types', (request, response) => {
     GetBusinessTypes_1.getBusinessTypesController.handle(request, response);
 });

@@ -8,18 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserAuthRepository = void 0;
-const moment_1 = __importDefault(require("moment"));
-const { Op } = require('sequelize');
-const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
-const currentTime = (0, moment_1.default)().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
 const connection = require('../../database/index');
-const LocalStrategy = require("passport-local").Strategy;
 class UserAuthRepository {
     // login user
     temp(request, response) {

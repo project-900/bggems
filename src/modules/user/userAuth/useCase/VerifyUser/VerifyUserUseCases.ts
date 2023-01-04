@@ -23,7 +23,7 @@ class VerifyUserUseCase {
             }else{
                 let mailBody = {
                     Email: verify.dataValues.email, 
-                    Subject: "Your account was verified, Please login to check account", 
+                    Subject: "Your account was verified, Please Login to check account",
                     Template: "",
                     Body: ""
                 }

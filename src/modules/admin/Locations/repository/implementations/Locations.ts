@@ -1,18 +1,7 @@
 import { ILocationRepository } from '../ILocations';
-import { Users } from '../../../../../models/Users';
-import { BusinessTypes } from '../../../../../models/BusinessTypes';
-import moment from 'moment';
-import jwt from 'jsonwebtoken';
 import { CityMaster } from '../../../../../models/CityMaster';
 import { RegionMaster } from '../../../../../models/RegionMaster';
 import { CountryMaster } from '../../../../../models/CountryMaster';
-
-const { Op } = require('sequelize');
-const TodayDate = moment().format('YYYY-MM-DD');
-const currentTime = moment().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
-
-const LocalStrategy = require("passport-local").Strategy;
 
 class LocationRepository implements ILocationRepository {
 

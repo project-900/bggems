@@ -8,18 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SalesPersonRepository = void 0;
 const SalesPersonMaster_1 = require("../../../../../models/SalesPersonMaster");
-const moment_1 = __importDefault(require("moment"));
-const { Op } = require('sequelize');
-const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
-const currentTime = (0, moment_1.default)().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
-const LocalStrategy = require("passport-local").Strategy;
 class SalesPersonRepository {
     // Get all business types
     getSalesPersons({ Status }) {

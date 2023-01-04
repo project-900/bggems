@@ -13,20 +13,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserAuthRepository = void 0;
-const moment_1 = __importDefault(require("moment"));
-const { Op } = require('sequelize');
-const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
-const currentTime = (0, moment_1.default)().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
 require('dotenv').config();
 const MAIL = process.env.MAIL;
 const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
 const MAIL_SERVICE = process.env.MAIL_SERVICE;
-const connection = require('../../database/index');
-const LocalStrategy = require("passport-local").Strategy;
 const nodemailer_1 = __importDefault(require("nodemailer"));
 class UserAuthRepository {
-    // login user
+    // Login user
     temp(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
             var transporter = nodemailer_1.default.createTransport({

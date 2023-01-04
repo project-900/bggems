@@ -1,5 +1,3 @@
-import { password } from '../../../../../config/database';
-import { generateToken } from '../../../../../middleware/auth';
 import { IUserAuthRepository } from '../../repository/IUserAuthRepository';
 import { compare } from 'bcrypt';
 import { IUserLoginDetailRepository } from '../../../../admin/UserLoginDetails/repository/IGetUserLoginDetailsRepository';

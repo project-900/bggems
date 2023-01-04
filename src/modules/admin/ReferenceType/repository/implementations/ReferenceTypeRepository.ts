@@ -1,15 +1,6 @@
 import { IReferenceTypeRepository } from '../IReferenceTypeRepository';
 import { ReferenceTypes } from '../../../../../models/ReferenceTypes';
-import moment from 'moment';
-import jwt from 'jsonwebtoken';
 import { Sequelize } from 'sequelize';
-
-const { Op } = require('sequelize');
-const TodayDate = moment().format('YYYY-MM-DD');
-const currentTime = moment().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
-
-const LocalStrategy = require("passport-local").Strategy;
 
 class ReferenceTypeRepository implements IReferenceTypeRepository {
 

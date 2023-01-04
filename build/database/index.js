@@ -1,26 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require("dotenv").config();
-// const DB_CONFIG = require("../config/database");
+require('dotenv').config();
 const DB_CONFIG = require("../config/database.js");
 const Sequelize = require("sequelize");
 const connection = new Sequelize(DB_CONFIG);
-// const connection = new Sequelize('bggems', 'SA', 'OPTICAL', {
-//   host: 'localhost',
-//   port: 1433,
-//   dialect: 'mssql',
-//   driver: "msnodesqlv8",
-//   dialectOptions: {
-//     connectionString: 'Server=localhost;Database=BGDim;User Id=Clv;Password=Clv;Trusted_Connection=yes;Driver={SQL Server Native Client 11.0};',
-//     instanceName: "SQLEXPRESS",
-//     trustedConnection: true,
-//   },
-//   options: {
-//     encrypt: false,
-//     enableArithAbort: false,
-//     trustServerCertificate: false,
-//   },
-// })
 connection.authenticate().then(() => {
     console.log({ 'Connection has been established successfully................': '' });
 }).catch((error) => {

@@ -1,12 +1,7 @@
 import { ISendMailRepository } from '../ISendMailRepository';
-import moment from 'moment';
-import { Sequelize } from 'sequelize';
 import nodemailer from 'nodemailer';
 
 require('dotenv').config()
-const { Op } = require('sequelize');
-const TodayDate = moment().format('YYYY-MM-DD');
-const currentTime = moment().format('HH:mm:ss');
 const MAIL = process.env.MAIL;
 const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
 const MAIL_SERVICE = process.env.MAIL_SERVICE;

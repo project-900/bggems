@@ -1,23 +1,15 @@
-import moment from 'moment';
-import jwt from 'jsonwebtoken';
 import { Request, Response } from 'express';
 
-const { Op } = require('sequelize');
-const TodayDate = moment().format('YYYY-MM-DD');
-const currentTime = moment().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
 require('dotenv').config()
 
 const MAIL = process.env.MAIL;
 const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
 const MAIL_SERVICE = process.env.MAIL_SERVICE;
-const connection = require('../../database/index');
-const LocalStrategy = require("passport-local").Strategy;
 import nodemailer from 'nodemailer';
 
 class UserAuthRepository {
 
-    // login user
+    // Login user
     async temp(request: Request, response: Response): Promise<any> {
 
         var transporter = nodemailer.createTransport({

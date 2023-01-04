@@ -1,4 +1,3 @@
-// require('dotenv').config()
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 var HOST = process.env.DB_DEV_HOST
@@ -28,31 +27,11 @@ if(process.env.NODE_ENV == 'testing'){
     PORT = process.env.DB_TEST_PORT
 }   
     
-//     module.exports = {
-//     host : HOST,
-//     username : USERNAME,
-//     password : PASSWORD,
-//     database : DATABASE,
-//     driver : DRIVER,
-//     dialectOptions: {
-//         connectionString: `Server=${HOST};Database=${DATABASE};User Id=${USERNAME};Password=${PASSWORD};Trusted_Connection=yes;Driver={SQL Server Native Client 11.0};`,
-//         instanceName: "SQLEXPRESS",
-//         trustedConnection: true,
-//         options: {
-//             encrypt: false,
-//             enableArithAbort: false,
-//             trustServerCertificate: false
-//         }
-//     },
-//     dialect : DIALECT,
-//     port: PORT
-// }
 module.exports = {
     host : HOST,
     username : USERNAME,
     password : PASSWORD,
     database : DATABASE,
-    // driver : DRIVER,
     dialectOptions: {
         connectionString: `Server=${HOST},${PORT};Initial Catalog=${DATABASE};Persist Security Info=False;User ID=${USERNAME};Password=${PASSWORD};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;`,
         instanceName: "SQLEXPRESS",

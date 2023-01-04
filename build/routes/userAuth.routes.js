@@ -5,7 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.userAuthRouter = void 0;
 const express_1 = require("express");
+// import { joiValidate } from "../helper/validate";
 const auth_1 = require("../middleware/auth");
+// import { userSchema } from "../middleware/routesValidator/user.validate";
 const Login_1 = require("../modules/user/userAuth/useCase/Login");
 const VerifyToken_1 = require("../modules/user/userAuth/useCase/VerifyToken");
 const VerifyUser_1 = require("../modules/user/userAuth/useCase/VerifyUser");

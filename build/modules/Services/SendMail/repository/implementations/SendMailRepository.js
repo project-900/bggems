@@ -13,12 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SendMailRepository = void 0;
-const moment_1 = __importDefault(require("moment"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
 require('dotenv').config();
-const { Op } = require('sequelize');
-const TodayDate = (0, moment_1.default)().format('YYYY-MM-DD');
-const currentTime = (0, moment_1.default)().format('HH:mm:ss');
 const MAIL = process.env.MAIL;
 const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
 const MAIL_SERVICE = process.env.MAIL_SERVICE;

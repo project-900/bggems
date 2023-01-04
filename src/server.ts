@@ -18,26 +18,11 @@ app.use(cors({
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 app.use(bodyParser.json());
-
-
-var dir = './build/logs';
-if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
-}
-
 const log = fs.createWriteStream(path.join(__dirname + "/logs", `${moment().format('YYYY-MM-DD')}.log`), { flags: "a" });
-
-// const passport = require("passport");
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 morganBody(app, {
     noColors: true,
     stream: log
-})
-
-app.get("/", (req, res)=>{
-    res.send("welcome to bggems backend...")
 })
 
 app.use(router);

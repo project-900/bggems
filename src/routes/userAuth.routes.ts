@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { joiValidate } from "../helper/validate";
+// import { joiValidate } from "../helper/validate";
 import { verifyTokenForAdmin, verifyTokenForUser } from "../middleware/auth";
-import { userSchema } from "../middleware/routesValidator/user.validate";
+// import { userSchema } from "../middleware/routesValidator/user.validate";
 import { loginController } from "../modules/user/userAuth/useCase/Login";
 import { verifyTokenController } from "../modules/user/userAuth/useCase/VerifyToken";
 import { verifyUserController } from "../modules/user/userAuth/useCase/VerifyUser";

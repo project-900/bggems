@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { joiValidate } from "../helper/validate";
-import { verifyTokenForUser } from "../middleware/auth";
-import { userSchema } from "../middleware/routesValidator/user.validate";
+// import { joiValidate } from "../helper/validate";
+// import { verifyTokenForUser } from "../middleware/auth";
+// import { userSchema } from "../middleware/routesValidator/user.validate";
 
 import { getCountryController } from '../modules/admin/Locations/useCase/GetCountry'
 import { getCityController } from '../modules/admin/Locations/useCase/GetCity'
@@ -13,7 +13,6 @@ import { addRegionController } from '../modules/admin/Locations/useCase/AddRegio
 
 const locationRouter = Router();
 
-// userAuthRouter.post('/login', joiValidate(userSchema.login), (request, response)=>{
 locationRouter.get('/get-countries', (request, response)=>{
     getCountryController.handle(request, response);
 })

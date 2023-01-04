@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.locationRouter = void 0;
 const express_1 = require("express");
+// import { joiValidate } from "../helper/validate";
+// import { verifyTokenForUser } from "../middleware/auth";
+// import { userSchema } from "../middleware/routesValidator/user.validate";
 const GetCountry_1 = require("../modules/admin/Locations/useCase/GetCountry");
 const GetCity_1 = require("../modules/admin/Locations/useCase/GetCity");
 const GetRegion_1 = require("../modules/admin/Locations/useCase/GetRegion");
@@ -10,7 +13,6 @@ const AddCountry_1 = require("../modules/admin/Locations/useCase/AddCountry");
 const AddRegion_1 = require("../modules/admin/Locations/useCase/AddRegion");
 const locationRouter = (0, express_1.Router)();
 exports.locationRouter = locationRouter;
-// userAuthRouter.post('/login', joiValidate(userSchema.login), (request, response)=>{
 locationRouter.get('/get-countries', (request, response) => {
     GetCountry_1.getCountryController.handle(request, response);
 });

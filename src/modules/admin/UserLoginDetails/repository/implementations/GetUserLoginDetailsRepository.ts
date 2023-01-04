@@ -1,18 +1,9 @@
 import { IUserLoginDetailRepository } from '../IGetUserLoginDetailsRepository';
 import { UserLoginDetails } from '../../../../../models/UserLoginDetails';
-import moment from 'moment';
-import jwt from 'jsonwebtoken';
-import { Sequelize } from 'sequelize';
 import { UserRoles } from '../../../../../models/UserRoles';
 
 require('dotenv').config()
 const ADMIN_ROLE_ID = process.env.ADMIN_ROLE_ID
-const { Op } = require('sequelize');
-const TodayDate = moment().format('YYYY-MM-DD');
-const currentTime = moment().format('HH:mm:ss');
-const bcrypt = require("bcrypt");
-
-const LocalStrategy = require("passport-local").Strategy;
 
 class UserLoginDetailRepository implements IUserLoginDetailRepository {
 
